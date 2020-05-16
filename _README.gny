@@ -1,0 +1,94 @@
+Template directory for my python3/PySide2/SQLite projects
+-----------------------------------------------------
+
+This directory contains files I adapted/found useful in developing a new project.
+
+    Open each in your favorite IDE to see details ....
+
+    "_README.gny"
+    A convenient place to put documentation for the directory where it is found,
+    For example, ~this~ file !
+    One _README.gny in each directory helps to keep documentation close to corresponding files ....
+
+    "_RUN_ME.py"
+    Template for a project start point,
+    in my case a main menu window based on "MenuWindow.py" class
+
+    "_Globals.py"
+    Convenient module for using project specific global variables
+    and global event filters
+
+    "MenuWindow.py"
+    A skeletal menu window class,  suitable for adapting and importing.
+
+    "ToolWindow.py"
+    A skeletal window class,  with default toolbar and suitable for copying as a template for other windows.
+
+    '/png'
+    Directory for my favorite icon files,  that may not be available from system libraries.
+    Read "_Support/png/_README.gny" for details.
+
+Notes:
+    Above template should also contain a valid link to '_Support' directory:
+        See "_Support/_README.gny"
+
+    about TODO keyword:
+        'TODO' keyword marks sites in above files with hints about updating for a new project.
+        Run 'pylint3' in 'Geany' Build menu,  to automatically see wherever 'TODO' was placed here.
+        Click on line number in report,  for 'Geany' to automatically jump to that line.
+        Easy-Peasy !!!
+
+    about 'pylint'
+        strongly recomend that you learn to use pylint,  catches many errors
+
+    about '_Quixote' directory refered to below
+        a compendum of my notes and code examples,  that I found useful while learning Linux/Python3/PySide2
+
+
+Usage of the above files for a new project:
+
+    Copy/paste the template directory, giving it the name of new project
+
+    Open new project directory
+
+    Make sure link to directory '_Support' is still valid
+
+    strongly recommended:
+
+        making your project a git repository ...
+        See "../_Quixote/2_OperatingSystem/Linux/appsCL/git/_README.gny"
+
+        a regular backup routine for entire project, to seperate media
+        See "../_Quixote/2_OperatingSystem/Linux/Instalation/Backup_Systems/_README.gny"
+
+    Create required SQLite database,  plus initial trial data
+            "../_Quixote/4_Language/Python3/modules/sqlite3/_README.gny"
+
+    Repeat following steps:
+
+        Update project "_README.gny" file
+            Update to document initial goals/plans/references/etc about new project
+
+        Update "_RUN_ME.py" for new project,
+            as the project´s startup/main menu script ...
+
+        Update "_Globals.py"
+            as needed for variables shared between different project modules
+            and event filters useful  in development
+
+        Update "MenuWindow.py" for your project,
+
+        Copy "ToolWindow.py", as a foundation for other window classes
+            Update copies as form, table, search windows and add to menu window
+
+        Create modules for any/all additional classes and methods required by project.
+            Note: 'Quixote' has many (mostly) working code examples - See "../_Quixote/_README.gny"
+
+        Test,  debug,  fix,  retest ...
+
+        Then repeat all above again,  till perfect .....
+
+    Once perfect (or nearly so ...!),  make project independant by replacing link to '_Support'
+        with a copy of the actual directory (less any uneeded files)
+
+    Reload database, with real working data.
