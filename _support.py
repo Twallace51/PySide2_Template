@@ -74,7 +74,8 @@ if "database utilities":
                     green('SELECT query succeded:')
             else:
                 green('UPDATE query succeded:')
-                print("query.executedQuery()  == ", end='')
+                ##print("query.executedQuery()  == ", end='')
+                print("query.executedQuery()  == ")
             green(query.executedQuery())
         else:
             alert('query failed:')
@@ -203,8 +204,8 @@ if "event filtering options":
                 #C.QEvent.ChildAdded, # An object gets a child ( QtCore.QChildEvent)
                 #C.QEvent.ChildPolished, # A widget child gets polished ( QtCore.QChildEvent)
                 #C.QEvent.ChildRemoved, # An object loses a child ( QtCore.QChildEvent)
-                C.QEvent.EnabledChange, # Widget’s enabled state has changed
-                C.QEvent.StyleChange, # Widget’s style has been changed
+                C.QEvent.EnabledChange, # Widget enabled state has changed
+                C.QEvent.StyleChange, # Widget style has been changed
 
                 #C.QEvent.Polish, # The widget is polished
                 #C.QEvent.PolishRequest, # The widget should be polished, event handler to do last-minute initializations of the widget, if needed
@@ -215,11 +216,11 @@ if "event filtering options":
                 C.QEvent.Show, # Widget was shown on screen ( QtGui.QShowEvent)
                 #C.QEvent.Hide, # Widget was hidden ( QtGui.QHideEvent)
                 #C.QEvent.Close, # Widget was closed ( QtGui.QCloseEvent)
-                #C.QEvent.Move, # Widget’s position changed ( QtGui.QMoveEvent)
+                #C.QEvent.Move, # Widget's position changed ( QtGui.QMoveEvent)
                 #C.QEvent.FocusAboutToChange, # Widget or Window focus is about to change (QtGui.QFocusEvent)
-                C.QEvent.FontChange, # Widget’s font has changed
+                C.QEvent.FontChange, # Widget's font has changed
                 #C.QEvent.Paint, # Screen update necessary ( QtGui.QPaintEvent)
-                C.QEvent.Resize, # Widget’s size changed (QtGui.QResizeEvent)
+                C.QEvent.Resize, # Widget's size changed (QtGui.QResizeEvent)
                 ):
                 return True
             return False
@@ -233,8 +234,8 @@ if "event filtering options":
                 MouseButtonRelease      allways follows ButtonPress ...
             """
             if event.type() in (
-                C.QEvent.Enter, # Mouse enters widget’s boundaries              ( QtGui.QEnterEvent)
-                C.QEvent.Leave, # Mouse leaves widget’s boundaries
+                C.QEvent.Enter, # Mouse enters widgets boundaries              ( QtGui.QEnterEvent)
+                C.QEvent.Leave, # Mouse leaves widgets boundaries
                 C.QEvent.HoverEnter, # The mouse cursor enters a hover widget       ( QtGui.QHoverEvent)
                 C.QEvent.HoverLeave, # The mouse cursor leaves a hover widget       ( QtGui.QHoverEvent)
                 #C.QEvent.HoverMove, # The mouse cursor moves inside a hover widget ( QtGui.QHoverEvent)
@@ -244,14 +245,13 @@ if "event filtering options":
                 #C.QEvent.MouseMove, # Mouse move                               ( QtGui.QMouseEvent)
                 C.QEvent.MouseTrackingChange, # The mouse tracking state has changed
                 C.QEvent.Wheel, # Mouse wheel rolled                            (QtGui.QWheelEvent)
-                #C.QEvent.CursorChange, # The widget’s cursor has changed
+                #C.QEvent.CursorChange, # The widgets cursor has changed
                 C.QEvent.NonClientAreaMouseButtonDblClick, # A mouse double click occurred outside the client area  (QtGui.QMouseEvent)
                 C.QEvent.NonClientAreaMouseButtonPress, # A mouse button press occurred outside the client area     (QtGui.QMouseEvent)
                 C.QEvent.NonClientAreaMouseButtonRelease, # A mouse button release occurred outside the client area (QtGui.QMouseEvent)
                 C.QEvent.NonClientAreaMouseMove, # A mouse move occurred outside the client area                    (QtGui.QMouseEvent)
                 C.QEvent.UngrabMouse, # Item loses mouse grab                   (QtWidgets.QGraphicsItem , QtQuick.QQuickItem)
-                C.QEvent.WhatsThisClicked, # A link in a widget’s “What’s This?” help was clicked
-                ):
+                C.QEvent.WhatsThisClicked):
                 return True
             return False
 
@@ -287,7 +287,7 @@ if "event filtering options":
                 C.QEvent.GraphicsSceneResize, # Widget was resized          ( QtWidgets.QGraphicsSceneResizeEvent)
 
                 # Layouts
-                C.QEvent.InputMethodQuery, # A input method query event     (QtGui.QInputMethodQueryEvent)
+                C.QEvent.InputMethodQuery, # A input method query event  (QtGui.QInputMethodQueryEvent)
                 C.QEvent.KeyboardLayoutChange, # The keyboard layout has changed
                 C.QEvent.LanguageChange, # The application translation changed
                 C.QEvent.LayoutDirectionChange, # The direction of layouts changed
@@ -296,7 +296,7 @@ if "event filtering options":
                 #
                 C.QEvent.WindowActivate, # Window was activated
                 #C.QEvent.WindowDeactivate, # Window was deactivated
-                #C.QEvent.ActivationChange, # A widget’s top-level window activation state has changed
+                #C.QEvent.ActivationChange, # A widgets top-level window activation state has changed
                 #C.QEvent.ApplicationActivate, # This enum has been deprecated. Use instead
                 C.QEvent.ApplicationActivated, # This enum has been deprecated. Use instead
                 C.QEvent.ApplicationDeactivate, # This enum has been deprecated. Use instead
@@ -304,18 +304,18 @@ if "event filtering options":
                 C.QEvent.ApplicationPaletteChange, # The default application palette has changed
                 C.QEvent.ApplicationStateChange, # The state of the application has changed
                 C.QEvent.ApplicationLayoutDirectionChange, # The default application layout direction has changed
-                C.QEvent.ApplicationWindowIconChange, # The application’s icon has changed
+                C.QEvent.ApplicationWindowIconChange, # The applications icon has changed
 
                 C.QEvent.ActionAdded, # A new action has been added ( QtGui.QActionEvent)
                 C.QEvent.ActionChanged, # An action has been changed ( QtGui.QActionEvent)
                 #C.QEvent.ActionRemoved, # An action has been removed ( QtGui.QActionEvent)
 
                 C.QEvent.CloseSoftwareInputPanel, # A widget wants to close the software input panel (SIP)
-                C.QEvent.ContentsRectChange, # The margins of the widget’s content rect changed
+                C.QEvent.ContentsRectChange, # The margins of the widgets content rect changed
                 C.QEvent.DeferredDelete, # The object will be deleted after it has cleaned up (QDeferredDeleteEvent)
 
                 #C.QEvent.DynamicPropertyChange, # A dynamic property was added, changed, or removed from the object
-                C.QEvent.EnterWhatsThisMode, # Send to toplevel widgets when the application enters “What’s This?” mode
+                C.QEvent.EnterWhatsThisMode, # Send to toplevel widgets when the application enters “Whats This?” mode
                 #C.QEvent.Expose, # Sent to a window when its on-screen contents are invalidated and need to be flushed from the backing store
                 C.QEvent.FileOpen, # File open request (QtGui.QFileOpenEvent)
                 C.QEvent.Gesture, # A gesture was triggered                     (QtWidgets.QGestureEvent)
@@ -324,10 +324,10 @@ if "event filtering options":
                 C.QEvent.GrabMouse, # Item gains mouse grab                     (QtWidgets.QGraphicsItem only)
 
                 C.QEvent.IconDrag, # The main icon of a window has been dragged away    (QtGui.QIconDragEvent)
-                C.QEvent.IconTextChange, # Widget’s icon text has been changed.         (Deprecated)')
+                C.QEvent.IconTextChange, # Widgets icon text has been changed.         (Deprecated)
                 C.QEvent.InputMethod, # An input method is being used                   (QtGui.QInputMethodEvent)
 
-                C.QEvent.LeaveWhatsThisMode, # Send to toplevel widgets when the application leaves “What’s This?” mode
+                C.QEvent.LeaveWhatsThisMode, # Send to toplevel widgets when the application leaves “Whats This?” mode
                 C.QEvent.LocaleChange, # The system locale has changed
 
                 C.QEvent.RequestSoftwareInputPanel, # A widget wants to open a software input panel (SIP)
@@ -339,8 +339,8 @@ if "event filtering options":
                 C.QEvent.ParentChange, # The widget parent has changed
                 C.QEvent.PlatformPanel, # A platform specific panel has been requested
                 #C.QEvent.PlatformSurface, # A native platform surface has been created or is about to be destroyed (QPlatformSurfaceEvent)
-                C.QEvent.QueryWhatsThis, # The widget should accept the event if it has “What’s This?” help (QtGui.QHelpEvent)
-                C.QEvent.ReadOnlyChange, # Widget’s read-only state has changed (since Qt 5.4)
+                C.QEvent.QueryWhatsThis, # The widget should accept the event if it has “Whats This?” help (QtGui.QHelpEvent)
+                C.QEvent.ReadOnlyChange, # Widgets read-only state has changed (since Qt 5.4)
                 C.QEvent.ScrollPrepare, # The object needs to fill in its geometry information (QtGui.QScrollPrepareEvent)
                 C.QEvent.Scroll, # The object needs to scroll to the supplied position (QtGui.QScrollEvent)
                 C.QEvent.Shortcut, # Key press in child for shortcut key handling (QtGui.QShortcutEvent)
@@ -361,9 +361,9 @@ if "event filtering options":
 
                 C.QEvent.ToolBarChange, # The toolbar button is toggled on macOS
                 C.QEvent.ToolTip, # A tooltip was requested                                        (QtGui.QHelpEvent)
-                C.QEvent.WhatsThis, # The widget should reveal “What’s This?” help                  (QtGui.QHelpEvent)
+                C.QEvent.WhatsThis, # The widget should reveal “Whats This?” help                  (QtGui.QHelpEvent)
 
-                C.QEvent.ToolTipChange, # The widget’s tooltip has changed
+                C.QEvent.ToolTipChange, # The widgets tooltip has changed
 
                 C.QEvent.TouchBegin, # Beginning of a sequence of touch-screen or track-pad events  (QtGui.QTouchEvent)
                 C.QEvent.TouchCancel, # Cancellation of touch-event sequence                        (QtGui.QTouchEvent)
@@ -373,8 +373,8 @@ if "event filtering options":
                 C.QEvent.UngrabKeyboard, # Item loses keyboard grab             (QtWidgets.QGraphicsItem only)
                 C.QEvent.WinEventAct, # A Windows-specific activation event has occurred
                 C.QEvent.WindowBlocked, # The window is blocked by a modal dialog
-                C.QEvent.WindowIconChange, # The window’s icon has changed
-                C.QEvent.WindowStateChange, # The window’s state (minimized, maximized or full-screen) has changed (QtGui.QWindowStateChangeEvent)
+                C.QEvent.WindowIconChange, # The windows icon has changed
+                C.QEvent.WindowStateChange, # The windows state (minimized, maximized or full-screen) has changed (QtGui.QWindowStateChangeEvent)
                 C.QEvent.WindowTitleChange, # The window title has changed
                 C.QEvent.WindowUnblocked, # The window is unblocked after a modal dialog exited
                 #C.QEvent.WinIdChange, # The window system identifer for this native widget has changed
